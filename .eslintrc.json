@@ -1,0 +1,42 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "es2021": true
+    },
+
+    "extends": [
+        //"next/core-web-vitals",
+        //"next",
+        "standard",
+        "plugin:react/recommended"
+    ],
+
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+
+    "plugins": [
+        "react"
+    ],
+
+    "rules": {
+        // Para usar punto y coma
+        //"semi": ["error", "always"],
+
+        //Para usar dobles comillas en los strings
+        //"quotes": ["error", "single"],
+
+        // Para formatear el className con comillas simples
+        "jsx-quotes": ["error", "prefer-single"],
+
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off"
+        //"react/no-unescaped-entities": "error"
+        //"@next/next/no-page-custom-font": "off"
+    }
+}

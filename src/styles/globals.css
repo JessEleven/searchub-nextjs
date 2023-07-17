@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.out-input:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.out-input {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 14px;
+  width: 14px;
+  background-image: url('../../public/delete-search.png');
+  background-position: center;}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+}
+
+/* input:-webkit-autofill {
+  -webkit-text-fill-color: #cbd5e1;
+} */
