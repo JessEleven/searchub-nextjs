@@ -20,10 +20,10 @@ export default function ThemeButton () {
     <button type='button' onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>
       { resolvedTheme === 'dark'
         ? (
-          <SvgSunLight className='stroke-indigo-800 hover:stroke-yellow-400 transition-colors duration-1000 w-5 h-5 md:w-6 md:h-6' />
+          <SvgSunLight className='w-5 h-5 md:w-6 md:h-6' />
           )
         : (
-          <SvgHalfMoon className='stroke-indigo-800 hover:stroke-yellow-400 transition-colors duration-1000 w-5 h-5 md:w-6 md:h-6' />
+          <SvgHalfMoon className='w-5 h-5 md:w-6 md:h-6' />
           )
       }
     </button>

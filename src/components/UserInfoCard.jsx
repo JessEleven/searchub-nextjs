@@ -13,8 +13,8 @@ function valideURL (url) {
 
 const UserInfoCard = ({ user }) => {
   return (
-    <section className='mt-4 mb-8 bg-[#F6F6F7] shadow-md text-black dark:shadow-none dark:text-slate-100 rounded-lg dark:bg-[#303030]'>
-      <div className='container px-3 lg:px-6 mx-auto flex flex-col'>
+    <section className='mt-4 mb-8 bg-[#F6F6F7] shadow-md text-neutral-800 dark:shadow-none dark:text-neutral-200 rounded-lg dark:bg-[#303030]'>
+      <div className='container px-4 lg:px-6 mx-auto flex flex-col'>
         <div className='flex flex-col sm:flex-row mt-4 lg:mt-6 mb-4 lg:mb-6'>
           <div className='sm:w-1/3 text-center mb-4 md:mb-0'>
             <div className='w-24 h-24 dark:border-0 border-2 border-indigo-800  overflow-hidden object-contain rounded-full inline-flex items-center justify-center bg-slate-300'>
@@ -43,12 +43,12 @@ const UserInfoCard = ({ user }) => {
                   }
                 </p>
                 <a data-type='github'
-                  className='flex items-center mt-4 rounded-lg px-5 py-2 bg-gray-500 hover:bg-gray-600 dark:bg-[#242424] dark:hover:bg-[#444444] transition-colors duration-300 md:text-base'
+                  className='flex gap-x-1.5 items-center mt-4 rounded-lg px-5 py-1.5 bg-gray-500 hover:bg-gray-600 dark:bg-[#242424] dark:hover:bg-[#444444] transition-colors duration-300 md:text-base'
                   href={user.html_url}
                   rel='noreferrer'
                   target='_blank'>
                   <SvgGitHub className='fill-[#f6f6f6] dark:fill-slate-300 flex items-center' />
-                  <span className='ml-2 text-sm 2xl:text-base font-medium text-[#f6f6f6] dark:text-slate-300'>GitHub</span>
+                  <span className='mt-0.5 text-sm 2xl:text-base font-medium text-[#f6f6f6] dark:text-slate-300'>GitHub</span>
                 </a>
               </div>
            </div>
@@ -61,7 +61,7 @@ const UserInfoCard = ({ user }) => {
             }
 
             { user.bio &&
-              <p className='h-full md:min-h-[96px] text-sm text-justify font-medium mb-4'>
+              <p className='h-full md:min-h-[96px] text-sm text-center md:text-left font-medium mb-4'>
                 {user.bio}
               </p>
             }
@@ -70,7 +70,7 @@ const UserInfoCard = ({ user }) => {
               <div className='grid grid-cols-3 py-4 font-semibold'>
                 <article className='text-center space-y-1'>
                   <div className='flex items-center justify-center'>
-                    <SvgRepository className='stroke-indigo-800' />
+                    <SvgRepository className='text-indigo-700' />
                   </div>
                   <p className='text-sm 2xl:text-base'>
                     Repos
@@ -82,7 +82,7 @@ const UserInfoCard = ({ user }) => {
 
                 <article className='text-center space-y-1'>
                   <div className='flex items-center justify-center'>
-                    <SvgFollowers className='stroke-indigo-800' />
+                    <SvgFollowers className='text-indigo-700' />
                   </div>
                   <p className='text-sm 2xl:text-base'>
                     Followers
@@ -94,7 +94,7 @@ const UserInfoCard = ({ user }) => {
 
                 <article className='text-center space-y-1'>
                   <div className='flex items-center justify-center'>
-                    <SvgFollowings className='stroke-indigo-800' />
+                    <SvgFollowings className='text-indigo-700' />
                   </div>
                   <p className='text-sm 2xl:text-base'>
                     Following
@@ -111,7 +111,7 @@ const UserInfoCard = ({ user }) => {
 
                 { user.location &&
                   <article className='flex items-center dark:shadow-none dark:bg-[#242424] bg-[#ececec] shadow-md rounded-lg px-3 py-2.5'>
-                    <SvgPinAlt className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] stroke-indigo-800 lg:min-w-[20px] lg:min-h-[20px]' />
+                    <SvgPinAlt className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] text-indigo-700 lg:min-w-[20px] lg:min-h-[20px]' />
                     <p className='ml-1.5 text-sm 2xl:text-base truncate'>
                       {user.location}
                     </p>
@@ -120,7 +120,7 @@ const UserInfoCard = ({ user }) => {
 
                 { user.blog &&
                   <article className='flex items-center dark:shadow-none dark:bg-[#242424] dark:hover:bg-[#444444] bg-[#ececec] shadow-md hover:bg-[#fcfafa] transition-colors duration-300 rounded-lg px-3 py-2.5'>
-                    <SvgLink className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] stroke-indigo-800 lg:min-w-[20px] lg:min-h-[20px]' />
+                    <SvgLink className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] text-indigo-700 lg:min-w-[20px] lg:min-h-[20px]' />
                     <a className='ml-1.5 text-sm 2xl:text-base truncate'
                       href={valideURL(user?.blog)}
                       rel='noreferrer'
@@ -132,7 +132,7 @@ const UserInfoCard = ({ user }) => {
 
                 { user.twitter_username &&
                   <article className='flex items-center dark:shadow-none dark:bg-[#242424] dark:hover:bg-[#444444] bg-[#ececec] shadow-md hover:bg-[#fcfafa] transition-colors duration-300 rounded-lg px-3 py-2.5'>
-                    <SvgTwitter className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] stroke-indigo-800 lg:min-w-[20px] lg:min-h-[20px]' />
+                    <SvgTwitter className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] text-indigo-700 lg:min-w-[20px] lg:min-h-[20px]' />
                     <a data-type='twitter'
                       className='ml-1.5 text-sm 2xl:text-base'
                       href={`https://www.twitter.com/${user.twitter_username}`}
@@ -145,7 +145,7 @@ const UserInfoCard = ({ user }) => {
 
                 { user.company &&
                   <article className='flex items-center dark:shadow-none dark:bg-[#242424] bg-[#ececec] shadow-md rounded-lg px-3 py-2.5'>
-                    <SvgBuilding className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] stroke-indigo-800 lg:min-w-[20px] lg:min-h-[20px]' />
+                    <SvgBuilding className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] text-indigo-700 lg:min-w-[20px] lg:min-h-[20px]' />
                     <p className='ml-1.5 text-sm 2xl:text-base truncate'>
                       {user.company}
                     </p>

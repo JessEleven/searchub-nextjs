@@ -22,12 +22,14 @@ export default function RootLayout ({ children }) {
       {/* <Head>
         <link rel='icon' type='image/png' sizes='32x32' href='./favicon-32x32.png' />
       </Head> */}
-      <body className={`${poppins.className} dark:bg-[#242424] bg-white`}>
+      <body className={`${poppins.className} dark:bg-[#242424] bg-neutral-50`}>
 
         <Provider>
-          <div className='lg:w-[700px] md:w-[600px] w-[360px] mx-auto'>
+          <div className='md:w-[650px] w-full mx-auto'>
             <Navbar />
-            {children}
+            <div className='md:mx-0 mx-4'>
+              {children}
+            </div>
           </div>
         </Provider>
 

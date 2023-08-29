@@ -1,6 +1,5 @@
 export const SvgGitHub = (props) => (
   <svg
-    xmlns='http://www.w3.org/2000/svg'
     width={24}
     height={24}
     {...props}
@@ -31,7 +30,6 @@ export const SvgUserImg = (props) => (
 
 export const SvgRepository = (props) => (
   <svg
-    xmlns='http://www.w3.org/2000/svg'
     width={24}
     height={24}
     fill='none'
@@ -60,7 +58,6 @@ export const SvgRepository = (props) => (
 
 export const SvgFollowers = (props) => (
   <svg
-    xmlns='http://www.w3.org/2000/svg'
     width={24}
     height={24}
     fill='none'
@@ -87,7 +84,6 @@ export const SvgFollowers = (props) => (
 
 export const SvgFollowings = (props) => (
   <svg
-    xmlns='http://www.w3.org/2000/svg'
     width={24}
     height={24}
     fill='none'

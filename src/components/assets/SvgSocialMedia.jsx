@@ -1,8 +1,5 @@
 export const SvgPinAlt = (props) => (
   <svg
-    xmlns='http://www.w3.org/2000/svg'
-    width={24}
-    height={24}
     fill='none'
     strokeWidth={2}
     stroke='currentColor'
@@ -23,9 +20,6 @@ export const SvgPinAlt = (props) => (
 
 export const SvgLink = (props) => (
   <svg
-    xmlns='http://www.w3.org/2000/svg'
-    width={24}
-    height={24}
     fill='none'
     strokeWidth={2}
     stroke='currentColor'
@@ -47,9 +41,6 @@ export const SvgLink = (props) => (
 
 export const SvgTwitter = (props) => (
   <svg
-    xmlns='http://www.w3.org/2000/svg'
-    width={24}
-    height={24}
     fill='none'
     strokeWidth={2}
     stroke='currentColor'
@@ -66,9 +57,6 @@ export const SvgTwitter = (props) => (
 
 export const SvgBuilding = (props) => (
   <svg
-    xmlns='http://www.w3.org/2000/svg'
-    width={24}
-    height={24}
     fill='none'
     strokeWidth={2}
     stroke='currentColor'

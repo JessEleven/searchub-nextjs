@@ -17,7 +17,8 @@
             "jsx": true
         },
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": "./jsconfig.json"
     },
 
     "plugins": [
@@ -38,5 +39,7 @@
         "react/prop-types": "off"
         //"react/no-unescaped-entities": "error"
         //"@next/next/no-page-custom-font": "off"
+
+        //"func-call-spacing": ["error", "always"]
     }
 }

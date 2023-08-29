@@ -1,10 +1,10 @@
 export default function AboutPage () {
   return (
-    <div className='mt-8 p-5 rounded-lg dark:bg-slate-500 dark:bg-opacity-20 bg-gray-500 bg-opacity-60 block'>
-      <h2 className='text-lg 2xl:text-[22px] font-semibold text-cyan-400'>
+    <div className='mt-8 p-5 rounded-lg dark:shadow-none shadow-md dark:bg-slate-500 dark:bg-opacity-20 bg-neutral-500 bg-opacity-10 block'>
+      <p className='text-lg text-center font-semibold text-cyan-400'>
         Acerca del sitio (*_*)
-      </h2>
-      <p className='text-sm 2xl:text-base text-justify mt-2 dark:text-slate-300 text-black'>
+      </p>
+      <p className='text-sm font-medium 2xl:text-base text-justify mt-2 dark:text-neutral-200 text-neutral-800'>
         Esta aplicación fue desarrollada en el Framework de {' '}
         <a className='underline underline-offset-4 decoration-cyan-400 text-cyan-400 font-semibold'
           data-type='nextjs'
