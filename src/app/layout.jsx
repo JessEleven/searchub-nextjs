@@ -22,7 +22,7 @@ export default function RootLayout ({ children }) {
       {/* <Head>
         <link rel='icon' type='image/png' sizes='32x32' href='./favicon-32x32.png' />
       </Head> */}
-      <body className={`${poppins.className} dark:bg-[#242424] bg-neutral-50`}>
+      <body className={`${poppins.className} dark:bg-[#242424] bg-white`}>
 
         <Provider>
           <div className='md:w-[650px] w-full mx-auto'>

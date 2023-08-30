@@ -32,9 +32,9 @@ const HomePage = () => {
      <UserSearchForm getUser={getUser} />
 
       { !user && !error && (
-        <div className='flex animate-pulse min-h-[575px] items-center justify-center mt-4 lg:min-h-[500px]'>
+        <div className='animate-pulse mt-56'>
           <div className='flex opacity-50 items-center justify-center'>
-            <p className='font-bold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-800 to-yellow-400'>Searc<span className='text-green-300 text-2xl md:text-3xl font-bold'>Hub</span></p>
+            <p className='font-bold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 to-yellow-400'>Searc<span className='text-emerald-500 text-2xl md:text-3xl font-bold'>Hub</span></p>
           </div>
         </div>
       )}

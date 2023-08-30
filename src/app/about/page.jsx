@@ -1,6 +1,6 @@
 export default function AboutPage () {
   return (
-    <div className='mt-8 p-5 rounded-lg dark:shadow-none shadow-md dark:bg-slate-500 dark:bg-opacity-20 bg-neutral-500 bg-opacity-10 block'>
+    <div className='mt-8 p-5 block rounded-lg dark:shadow-none shadow-md dark:bg-slate-500 dark:bg-opacity-20 bg-[#F6F6F7]'>
       <p className='text-lg text-center font-semibold text-cyan-400'>
         Acerca del sitio (*_*)
       </p>

@@ -5,16 +5,16 @@ import Logo from '../../public/logo-app.png'
 
 export default function Navbar () {
   return (
-    <div className ='mt-0 mx-4 md:mx-0 rounded-lg dark:bg-opacity-20 dark:bg-slate-500 bg-neutral-500 bg-opacity-10'>
+    <div className ='mt-0 mx-4 md:mx-0 rounded-lg dark:bg-opacity-20 dark:bg-slate-500 bg-[#E1E1E3]'>
       <div className='h-12 mt-4 md:h-14 px-4 flex items-center justify-between'>
 
         <Link translate='no' href={'/'} className='flex items-center gap-1.5'>
           <Image
-            className='w-7 md:w-10'
+            className='w-7 md:w-9'
             src={Logo}
             alt='Logo'
             priority />
-          <p className='text-xl font-bold md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-800 to-yellow-400'>Searc<span className='text-xl text-green-300 md:text-3xl font-bold'>Hub</span></p>
+          <p className='text-xl font-bold md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 to-yellow-400'>Searc<span className='text-xl text-emerald-500 md:text-3xl font-bold'>Hub</span></p>
         </Link>
 
         <div className='flex items-center gap-x-2.5'>

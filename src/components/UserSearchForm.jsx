@@ -32,17 +32,17 @@ const UserSearchForm = ({ getUser }) => {
       <div className='flex items-center'>
         <div className='relative w-full border-2 rounded-bl-lg rounded-tl-lg border-indigo-700'>
           <div className='flex py-2.5 absolute pl-4'>
-            <SvgSearch className='w-5 h-5 stroke-black dark:stroke-slate-300'/>
+            <SvgSearch className='w-5 h-5 text-neutral-800 dark:text-neutral-200'/>
           </div>
           <input
-              className='bg-transparent flex items-center text-sm font-medium w-full pr-4 pl-12 py-2.5 out-input rounded-tl-lg rounded-bl-lg text-black dark:text-slate-100 dark:placeholder:text-slate-300 placeholder:text-black '
+              className='bg-transparent flex items-center text-sm font-medium w-full pr-4 pl-11 py-2.5 out-input rounded-tl-lg rounded-bl-lg text-neutral-800 dark:text-neutral-200 dark:placeholder:text-neutral-200 placeholder:text-neutral-800 '
               name='username'
               type='search'
               placeholder='Usuario GitHub'
               autoFocus/>
         </div>
 
-        <button className='py-2.5 flex items-center justify-center text-sm transition-all duration-300 hover:bg-indigo-900 bg-indigo-700 font-medium rounded-tr-lg rounded-br-lg text-slate-100 border-indigo-700 border-2 border-solid'>
+        <button className='py-2.5 flex items-center justify-center text-sm transition-all duration-300 hover:bg-indigo-900 bg-indigo-700 font-medium rounded-tr-lg rounded-br-lg text-neutral-200 border-indigo-700 border-2 border-solid'>
         {/* disabled={loading} disabled:cursor-progress  */}
         { loading
           ? <span className='flex items-center gap-x-1.5 justify-center px-2.5'>

@@ -66,7 +66,7 @@ const UserInfoCard = ({ user }) => {
               </p>
             }
 
-            <div className='w-full dark:shadow-none dark:bg-[#242424] bg-[#ececec] shadow-md rounded-lg'>
+            <div className='w-full dark:shadow-none dark:bg-[#242424] bg-[#E1E1E3] shadow-md rounded-lg'>
               <div className='grid grid-cols-3 py-4 font-semibold'>
                 <article className='text-center space-y-1'>
                   <div className='flex items-center justify-center'>
@@ -110,7 +110,7 @@ const UserInfoCard = ({ user }) => {
               <div className='mt-4 grid gap-y-3 md:gap-x-3 grid-cols-1 md:grid-cols-2 font-medium'>
 
                 { user.location &&
-                  <article className='flex items-center dark:shadow-none dark:bg-[#242424] bg-[#ececec] shadow-md rounded-lg px-3 py-2.5'>
+                  <article className='flex items-center dark:shadow-none dark:bg-[#242424] bg-[#E1E1E3] shadow-md rounded-lg px-3 py-2.5'>
                     <SvgPinAlt className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] text-indigo-700 lg:min-w-[20px] lg:min-h-[20px]' />
                     <p className='ml-1.5 text-sm 2xl:text-base truncate'>
                       {user.location}
@@ -119,7 +119,7 @@ const UserInfoCard = ({ user }) => {
                 }
 
                 { user.blog &&
-                  <article className='flex items-center dark:shadow-none dark:bg-[#242424] dark:hover:bg-[#444444] bg-[#ececec] shadow-md hover:bg-[#fcfafa] transition-colors duration-300 rounded-lg px-3 py-2.5'>
+                  <article className='flex items-center dark:shadow-none dark:bg-[#242424] dark:hover:bg-[#444444] bg-[#E1E1E3] shadow-md hover:bg-[#fcfafa] transition-colors duration-300 rounded-lg px-3 py-2.5'>
                     <SvgLink className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] text-indigo-700 lg:min-w-[20px] lg:min-h-[20px]' />
                     <a className='ml-1.5 text-sm 2xl:text-base truncate'
                       href={valideURL(user?.blog)}
@@ -131,7 +131,7 @@ const UserInfoCard = ({ user }) => {
                 }
 
                 { user.twitter_username &&
-                  <article className='flex items-center dark:shadow-none dark:bg-[#242424] dark:hover:bg-[#444444] bg-[#ececec] shadow-md hover:bg-[#fcfafa] transition-colors duration-300 rounded-lg px-3 py-2.5'>
+                  <article className='flex items-center dark:shadow-none dark:bg-[#242424] dark:hover:bg-[#444444] bg-[#E1E1E3] shadow-md hover:bg-[#fcfafa] transition-colors duration-300 rounded-lg px-3 py-2.5'>
                     <SvgTwitter className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] text-indigo-700 lg:min-w-[20px] lg:min-h-[20px]' />
                     <a data-type='twitter'
                       className='ml-1.5 text-sm 2xl:text-base'
@@ -144,7 +144,7 @@ const UserInfoCard = ({ user }) => {
                 }
 
                 { user.company &&
-                  <article className='flex items-center dark:shadow-none dark:bg-[#242424] bg-[#ececec] shadow-md rounded-lg px-3 py-2.5'>
+                  <article className='flex items-center dark:shadow-none dark:bg-[#242424] bg-[#E1E1E3] shadow-md rounded-lg px-3 py-2.5'>
                     <SvgBuilding className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] text-indigo-700 lg:min-w-[20px] lg:min-h-[20px]' />
                     <p className='ml-1.5 text-sm 2xl:text-base truncate'>
                       {user.company}
