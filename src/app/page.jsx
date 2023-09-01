@@ -5,25 +5,20 @@ import UserSearchForm from '@/components/UserSearchForm'
 import { lazy, Suspense, useState } from 'react'
 const UserInfoCard = lazy(() => import('@/components/UserInfoCard'))
 
-// function Fallback () {
-//   return <div className='mt-4 text-sm 2xl:text-base font-medium'>Cargando los datos...</div>
-// }
-
 const HomePage = () => {
   const [user, setUser] = useState(String)
   const [error, setError] = useState(null)
 
   const getUser = async (username) => {
-    const respose = await fetch(`https://api.github.com/users/${username}`)
-    console.log(respose)
+    const response = await fetch(`https://api.github.com/users/${username}`)
 
-    if (!respose.ok) {
-      setUser(null)
-      setError('No encontrado')
+    if (!response.ok) {
+      // setUser(null)
+      setError('Usuario no encontrado')
       return
     }
 
-    setUser(await respose.json())
+    setUser(await response.json())
     setError(null)
   }
 
@@ -41,7 +36,7 @@ const HomePage = () => {
 
       { error && (
           <div className='flex items-center mt-4 px-4 py-2.5 gap-x-2.5 rounded-md dark:bg-opacity-20 dark:bg-slate-500 bg-neutral-500 bg-opacity-10'>
-            <SvgWarning className='w-5 h-5 text-red-400'/>
+            <SvgWarning className='w-5 h-5 text-red-500'/>
             <p className='text-sm 2xl:text-base font-medium'>{error}</p>
           </div>
       )}
