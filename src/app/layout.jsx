@@ -17,12 +17,12 @@ export const metadata = {
 export default function RootLayout ({ children }) {
   return (
     <html lang='es' suppressHydrationWarning>
-      <body className={`${poppins.className}`}>
+      <body className={`${poppins.className} dark:bg-[#242424] bg-white`}>
 
         <Provider>
-          <div className='md:w-[650px] w-full mx-auto'>
+          <div className='md:w-[675px] w-full mx-auto'>
             <Navbar />
-            <div className='md:mx-0 mx-4'>
+            <div className='md:mx-0 mx-5'>
               {children}
             </div>
           </div>

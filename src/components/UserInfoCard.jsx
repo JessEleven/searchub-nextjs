@@ -13,26 +13,28 @@ function valideURL (url) {
 
 const UserInfoCard = ({ user }) => {
   return (
-    <section className='mt-4 mb-8 bg-[#F6F6F7] shadow-md text-neutral-800 dark:shadow-none dark:text-neutral-200 rounded-lg dark:bg-[#303030]'>
-      <div className='container px-4 lg:px-6 mx-auto flex flex-col'>
-        <div className='flex flex-col sm:flex-row mt-4 lg:mt-6 mb-4 lg:mb-6'>
-          <div className='sm:w-1/3 text-center mb-4 md:mb-0'>
-            <div className='w-24 h-24 dark:border-0 border-2 border-indigo-800  overflow-hidden object-contain rounded-full inline-flex items-center justify-center bg-slate-300'>
+    <section className='mt-6 mb-6 dark:shadow-none dark:bg-[#303030] dark:text-neutral-200 rounded-lg shadow-md bg-[#f6f6f7] text-neutral-800'>
+      <div className='container mx-auto flex flex-col'>
+        <div className='flex flex-col sm:flex-row p-5'>
+          <div className='sm:w-1/3 sm:mr-4 text-center mb-4 md:mb-0'>
+            <div className='text-sm overflow-hidden inline-flex items-center justify-center'>
               { user.avatar_url && (
                   <Image
+                    className={ user.avatar_url ? 'rounded-full object-contain' : null }
                     src={user.avatar_url}
-                    width={98}
-                    height={98}
-                    alt={`username ${user.login}`}
+                    width={96}
+                    height={96}
+                    alt={`user ${user.login}`}
                     priority />
               )}
             </div>
 
-            <div className='flex flex-col items-center text-center justify-center -mt-1.5'>
-              <p className='text-sm md:text-base font-semibold mt-2 break-all px-2'>
+            <div className='flex flex-col items-center text-center justify-center mt-2'>
+              <p className='text-sm md:text-base font-semibold break-all'>
                   <span>@</span>{user.login}
               </p>
-              <div className='w-32 h-1 bg-indigo-800 rounded mt-2 mb-2'></div>
+
+              <div className='w-36 h-1 rounded my-2 bg-gradient-to-r from-indigo-700 to-cyan-400'></div>
                 <p className='text-sm 2xl:text-base font-medium'>
                   { new Date(user.created_at || '').toLocaleDateString('es',
                     {
@@ -42,37 +44,38 @@ const UserInfoCard = ({ user }) => {
                     })
                   }
                 </p>
+
                 <a data-type='github'
-                  className='flex gap-x-1.5 items-center mt-4 rounded-lg px-5 py-1.5 bg-gray-500 hover:bg-gray-600 dark:bg-[#242424] dark:hover:bg-[#444444] transition-colors duration-300 md:text-base'
+                  className='flex items-center gap-x-1 mt-4 rounded-lg px-5 py-1.5 hover:from-indigo-900 hover:to-cyan-600 transition-all duration-300 bg-gradient-to-r from-indigo-700 to-cyan-400'
                   href={user.html_url}
                   rel='noreferrer'
                   target='_blank'>
-                  <SvgGitHub className='fill-[#f6f6f6] dark:fill-slate-300 flex items-center' />
-                  <span className='mt-0.5 text-sm 2xl:text-base font-medium text-[#f6f6f6] dark:text-slate-300'>GitHub</span>
+                    <SvgGitHub className='fill-neutral-800' />
+                    <span className='mt-0.5 text-sm 2xl:text-base font-medium text-neutral-800'>GitHub</span>
                 </a>
               </div>
            </div>
 
           <div className='sm:w-2/3 h-full'>
             { user.bio &&
-              <p className='text-center md:text-left text-base md:text-lg font-semibold mb-4'>
+              <p className='text-center md:text-left text-base 2xl:text-lg font-semibold mb-4'>
                 {user.name}
               </p>
             }
 
             { user.bio &&
-              <p className='h-full md:min-h-[96px] text-sm text-center md:text-left font-medium mb-4'>
+              <p className='h-full md:min-h-[96px] leading-relaxed text-sm 2xl:text-base font-medium mb-4'>
                 {user.bio}
               </p>
             }
 
-            <div className='w-full dark:shadow-none dark:bg-[#242424] bg-[#E1E1E3] shadow-md rounded-lg'>
-              <div className='grid grid-cols-3 py-4 font-semibold'>
-                <article className='text-center space-y-1'>
-                  <div className='flex items-center justify-center'>
-                    <SvgRepository className='text-indigo-700' />
+            <div className='w-full rounded-lg p-[2.5px] bg-gradient-to-r from-indigo-700 to-cyan-400'>
+              <div className='grid dark:bg-[#303030] bg-[#f6f6f7] rounded-md grid-cols-3 py-5 font-semibold'>
+                <article className='repo-card'>
+                  <div className='repo-svg'>
+                    <SvgRepository />
                   </div>
-                  <p className='text-sm 2xl:text-base'>
+                  <p className='repo-title'>
                     Repos
                   </p>
                   <p className='text-base'>
@@ -80,11 +83,11 @@ const UserInfoCard = ({ user }) => {
                   </p>
                 </article>
 
-                <article className='text-center space-y-1'>
-                  <div className='flex items-center justify-center'>
-                    <SvgFollowers className='text-indigo-700' />
+                <article className='repo-card'>
+                  <div className='repo-svg'>
+                    <SvgFollowers />
                   </div>
-                  <p className='text-sm 2xl:text-base'>
+                  <p className='repo-title'>
                     Followers
                   </p>
                   <p className='text-base'>
@@ -92,11 +95,11 @@ const UserInfoCard = ({ user }) => {
                   </p>
                 </article>
 
-                <article className='text-center space-y-1'>
-                  <div className='flex items-center justify-center'>
-                    <SvgFollowings className='text-indigo-700' />
+                <article className='repo-card'>
+                  <div className='repo-svg'>
+                    <SvgFollowings />
                   </div>
-                  <p className='text-sm 2xl:text-base'>
+                  <p className='repo-title'>
                     Following
                   </p>
                   <p className='text-base'>
@@ -106,22 +109,26 @@ const UserInfoCard = ({ user }) => {
               </div>
             </div>
 
-            <div className='flex flex-col'>
-              <div className='mt-4 grid gap-y-3 md:gap-x-3 grid-cols-1 md:grid-cols-2 font-medium'>
+            <div className='flex flex-col mt-4'>
+              <div className='grid gap-4 grid-cols-1 md:grid-cols-2 font-medium'>
 
                 { user.location &&
-                  <article className='flex items-center dark:shadow-none dark:bg-[#242424] bg-[#E1E1E3] shadow-md rounded-lg px-3 py-2.5'>
-                    <SvgPinAlt className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] text-indigo-700 lg:min-w-[20px] lg:min-h-[20px]' />
-                    <p className='ml-1.5 text-sm 2xl:text-base truncate'>
+                  <article className='media-card'>
+                    <div className='media-bg'>
+                      <SvgPinAlt className='media-svg' />
+                    </div>
+                    <p className='media-info'>
                       {user.location}
                     </p>
                   </article>
                 }
 
                 { user.blog &&
-                  <article className='flex items-center dark:shadow-none dark:bg-[#242424] dark:hover:bg-[#444444] bg-[#E1E1E3] shadow-md hover:bg-[#fcfafa] transition-colors duration-300 rounded-lg px-3 py-2.5'>
-                    <SvgLink className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] text-indigo-700 lg:min-w-[20px] lg:min-h-[20px]' />
-                    <a className='ml-1.5 text-sm 2xl:text-base truncate'
+                  <article className='media-card media-hover'>
+                    <div className='media-bg'>
+                      <SvgLink className='media-svg' />
+                    </div>
+                    <a className='media-info'
                       href={valideURL(user?.blog)}
                       rel='noreferrer'
                       target='_blank'>
@@ -131,10 +138,12 @@ const UserInfoCard = ({ user }) => {
                 }
 
                 { user.twitter_username &&
-                  <article className='flex items-center dark:shadow-none dark:bg-[#242424] dark:hover:bg-[#444444] bg-[#E1E1E3] shadow-md hover:bg-[#fcfafa] transition-colors duration-300 rounded-lg px-3 py-2.5'>
-                    <SvgTwitter className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] text-indigo-700 lg:min-w-[20px] lg:min-h-[20px]' />
+                  <article className='media-card media-hover'>
+                    <div className='media-bg'>
+                      <SvgTwitter className='media-svg' />
+                    </div>
                     <a data-type='twitter'
-                      className='ml-1.5 text-sm 2xl:text-base'
+                      className='media-info'
                       href={`https://www.twitter.com/${user.twitter_username}`}
                       rel='noreferrer'
                       target='_blank'>
@@ -144,9 +153,11 @@ const UserInfoCard = ({ user }) => {
                 }
 
                 { user.company &&
-                  <article className='flex items-center dark:shadow-none dark:bg-[#242424] bg-[#E1E1E3] shadow-md rounded-lg px-3 py-2.5'>
-                    <SvgBuilding className='w-[20px] h-[20px] md:min-w-[20px] md:min-h-[20px] text-indigo-700 lg:min-w-[20px] lg:min-h-[20px]' />
-                    <p className='ml-1.5 text-sm 2xl:text-base truncate'>
+                  <article className='media-card'>
+                    <div className='media-bg'>
+                      <SvgBuilding className='media-svg' />
+                    </div>
+                    <p className='media-info'>
                       {user.company}
                     </p>
                  </article>

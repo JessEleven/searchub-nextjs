@@ -2,47 +2,53 @@
 
 import { SvgWarning } from '@/components/assets/SvgNavbar'
 import UserSearchForm from '@/components/UserSearchForm'
-import { lazy, Suspense, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 const UserInfoCard = lazy(() => import('@/components/UserInfoCard'))
 
 const HomePage = () => {
   const [user, setUser] = useState(String)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState(false)
+  const [message, setMessage] = useState(false)
 
-  const getUser = async (username) => {
-    const response = await fetch(`https://api.github.com/users/${username}`)
+  const getUser = async (userFound) => {
+    const response = await fetch(`https://api.github.com/users/${userFound}`)
 
     if (!response.ok) {
-      // setUser(null)
-      setError('Usuario no encontrado')
+      setError(true)
+      setMessage('Usuario no encontrado')
       return
     }
-
     setUser(await response.json())
-    setError(null)
+    setError(false)
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setError(false)
+    }, 2000)
+  }, [error])
 
   return (
     <>
      <UserSearchForm getUser={getUser} />
 
       { !user && !error && (
-        <div className='animate-pulse mt-56'>
+        <div className='animate-pulse mt-[272px]'>
           <div className='flex opacity-50 items-center justify-center'>
-            <p className='font-bold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 to-yellow-400'>Searc<span className='text-emerald-500 text-2xl md:text-3xl font-bold'>Hub</span></p>
+            <p className='font-bold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 to-pink-500'>Searc<span className='text-emerald-500 text-3xl font-bold'>Hub</span></p>
           </div>
         </div>
       )}
 
       { error && (
-          <div className='flex items-center mt-4 px-4 py-2.5 gap-x-2.5 rounded-md dark:bg-opacity-20 dark:bg-slate-500 bg-neutral-500 bg-opacity-10'>
-            <SvgWarning className='w-5 h-5 text-red-500'/>
-            <p className='text-sm 2xl:text-base font-medium'>{error}</p>
+          <div className='flex items-center mt-4 px-4 py-2.5 gap-x-1.5 rounded-lg dark:bg-[#303030] bg-[#F6F6F7] transition duration-500 ease-in'>
+            <SvgWarning className='w-5 h-5 text-red-400'/>
+            <p className='text-sm dark:text-neutral-200 text-neutral-800 2xl:text-base font-medium'>{message}</p>
           </div>
       )}
 
       <Suspense>
-        {user && (<UserInfoCard user={user}/>)}
+        { user && (<UserInfoCard className='bg-opacity-10' user={user}/>)}
       </Suspense>
     </>
   )

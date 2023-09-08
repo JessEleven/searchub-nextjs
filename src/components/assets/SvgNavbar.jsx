@@ -46,3 +46,39 @@ export const SvgHalfMoon = (props) => (
     />
   </svg>
 )
+
+export const SvgMenu = (props) => (
+  <svg
+  width={26}
+  height={26}
+  fill='none'
+  strokeWidth={2}
+  viewBox='0 0 24 24'
+  {...props}
+>
+  <path
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+    d='M3 5h18M3 12h18M3 19h18'
+  />
+</svg>
+)
+
+export const SvgCloseMenu = (props) => (
+  <svg
+  width={28}
+  height={28}
+  fill='none'
+  strokeWidth={2}
+  viewBox='0 0 24 24'
+  {...props}
+>
+  <path
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+    d='M9.172 14.828 12.001 12m2.828-2.828L12.001 12m0 0L9.172 9.172M12.001 12l2.828 2.828M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z'
+  />
+</svg>
+)

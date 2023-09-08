@@ -1,0 +1,11 @@
+.repo-card {
+  @apply text-center space-y-1.5
+}
+
+.repo-svg {
+  @apply flex justify-center text-indigo-700
+}
+
+.repo-title {
+  @apply text-sm 2xl:text-base
+}

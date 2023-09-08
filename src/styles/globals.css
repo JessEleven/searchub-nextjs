@@ -2,13 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.out-input:focus {
+@import './repository.css';
+@import './connectivity.css';
+@import './about.css';
+
+.out-input {
   outline: none;
   box-shadow: none;
   border: none;
 }
 
-.out-input {
+.out-input:focus {
   outline: none;
   box-shadow: none;
   border: none;
@@ -22,6 +26,7 @@ input[type="search"]::-webkit-search-cancel-button {
   background-position: center;
 }
 
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus {
@@ -29,5 +34,5 @@ input:-webkit-autofill:focus {
 }
 
 /* input:-webkit-autofill {
-  -webkit-text-fill-color: #cbd5e1;
+  -webkit-text-fill-color: #e7e5e4;
 } */

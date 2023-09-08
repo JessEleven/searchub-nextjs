@@ -41,5 +41,7 @@
         //"@next/next/no-page-custom-font": "off"
 
         //"func-call-spacing": ["error", "always"]
+        //"react/no-unknown-property": ["error", { "ignore": ["css"] }],
+        //"react/no-unknown-property": ["<enabled>", { "ignore": "<ignore>" }]
     }
 }

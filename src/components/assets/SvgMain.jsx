@@ -30,8 +30,8 @@ export const SvgUserImg = (props) => (
 
 export const SvgRepository = (props) => (
   <svg
-    width={24}
-    height={24}
+    width={28}
+    height={28}
     fill='none'
     strokeWidth={2}
     stroke='currentColor'
@@ -58,8 +58,8 @@ export const SvgRepository = (props) => (
 
 export const SvgFollowers = (props) => (
   <svg
-    width={24}
-    height={24}
+    width={28}
+    height={28}
     fill='none'
     strokeWidth={2}
     stroke='currentColor'
@@ -84,8 +84,8 @@ export const SvgFollowers = (props) => (
 
 export const SvgFollowings = (props) => (
   <svg
-    width={24}
-    height={24}
+    width={28}
+    height={28}
     fill='none'
     strokeWidth={2}
     stroke='currentColor'

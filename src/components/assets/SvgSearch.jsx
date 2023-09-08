@@ -1,7 +1,7 @@
 export const SvgSearch = (props) => (
   <svg
     fill='none'
-    strokeWidth={2.5}
+    strokeWidth={2}
     stroke='currentColor'
     viewBox='0 0 24 24'
     {...props}

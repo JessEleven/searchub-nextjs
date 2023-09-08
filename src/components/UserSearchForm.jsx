@@ -11,43 +11,44 @@ const UserSearchForm = ({ getUser }) => {
 
   const onSubmit = async (data) => {
     setLoading(true)
-    const name = data.username
-    if (!name) return
+    const userFound = data.username
+    if (!userFound) return
 
-    await getUser(name)
+    await getUser(userFound)
     setLoading(false)
     reset()
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='mt-8'>
+    <form onSubmit={handleSubmit(onSubmit)} className='mt-10'>
 
-      <div className='flex items-center'>
-        <div className='relative w-full border-solid border-2 border-t-2 border-b-2 border-l-2 border-r-0 rounded-bl-lg rounded-tl-lg border-indigo-700'>
-          <div className='flex py-2.5 absolute pl-4'>
-            <SvgSearch className='w-5 h-5 text-neutral-800 dark:text-neutral-200'/>
+      <div className='flex items-center text-neutral-200 font-medium text-sm 2xl:text-base'>
+        <div className='relative flex w-full bg-slate-900 bg-opacity-90 rounded-lg'>
+          <div className='flex py-3 absolute pl-5'>
+            <SvgSearch className='w-5 h-5 text-emerald-500'/>
           </div>
           <input
               {... register('username', { required: true })}
-              className='bg-transparent flex items-center text-sm font-medium w-full pr-4 pl-11 py-2.5 out-input rounded-tl-lg rounded-bl-lg text-neutral-800 dark:text-neutral-200 dark:placeholder:text-neutral-200 placeholder:text-neutral-800 '
+              className='out-input bg-transparent py-3 flex items-center w-full pr-5 pl-11 rounded-l-lg placeholder:text-neutral-200'
               name='username'
               type='search'
               placeholder='Usuario GitHub 🚀'
               autoFocus/>
-        </div>
+        <div className='border-2 border-emerald-500 rounded my-2'></div>
 
-        <button type='submit' disabled={loading} className='py-2.5 disabled:cursor-progress flex items-center justify-center bg-[#303030] text-sm font-medium rounded-tr-lg rounded-br-lg text-neutral-200 border-indigo-700 border-2 border-solid'>
+        <button type='submit' disabled={loading} className='py-3 2xl:min-w-[125px] min-w-[115px] disabled:cursor-progress flex items-center justify-center rounded-r-md'>
 
         { loading
-          ? <span className='flex items-center gap-x-1.5 justify-center px-2.5'>
+          ? <span className='flex items-center gap-x-1.5 justify-center'>
               <SvgLoading />Buscando</span>
-          : <span className='px-[34px]'>Buscar</span>
+          : <span className=''>Buscar</span>
         }
         </button>
       </div>
+      </div>
 
       {errors.username && (
-        <p className='text-sm mt-1 text-red-500 2xl:text-base'>Nombre de usuario requerido</p>
+        <p className='text-sm mt-1.5 -mb-2 font-medium text-red-400'>Nombre de usuario requerido</p>
       )}
     </form>
   )

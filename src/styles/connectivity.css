@@ -1,0 +1,19 @@
+.media-card {
+  @apply flex items-center p-2 rounded-lg dark:bg-[#242424] bg-[#E1E1E3]
+}
+
+.media-hover {
+  @apply dark:hover:bg-[#444444] hover:bg-[#fcfafa] transition-all duration-300
+}
+
+.media-info {
+  @apply pl-2 text-sm 2xl:text-lg truncate
+}
+
+.media-bg {
+  @apply p-2 dark:bg-[#444444] bg-[#fcfcfc] rounded-full
+}
+
+.media-svg {
+  @apply w-5 h-5 2xl:w-6 2xl:h-6 text-indigo-700
+}
