@@ -57,7 +57,7 @@ const UserInfoCard = ({ user }) => {
            </div>
 
           <div className='sm:w-2/3 h-full'>
-            { user.bio &&
+            { user.name &&
               <p className='text-center md:text-left text-base 2xl:text-lg font-semibold mb-4'>
                 {user.name}
               </p>
@@ -69,7 +69,7 @@ const UserInfoCard = ({ user }) => {
               </p>
             }
 
-            <div className='w-full rounded-lg p-[2.5px] bg-gradient-to-r from-indigo-700 to-cyan-400'>
+            <div className='w-full rounded-lg p-[2.5px] bg-gradient-to-r from-indigo-700 to-indigo-300'>
               <div className='grid dark:bg-[#303030] bg-[#f6f6f7] rounded-md grid-cols-3 py-5 font-semibold'>
                 <article className='repo-card'>
                   <div className='repo-svg'>

@@ -33,9 +33,9 @@ const HomePage = () => {
      <UserSearchForm getUser={getUser} />
 
       { !user && !error && (
-        <div className='animate-pulse mt-[272px]'>
+        <div className='animate-pulse mt-[272px] text-3xl font-bold'>
           <div className='flex opacity-50 items-center justify-center'>
-            <p className='font-bold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 to-pink-500'>Searc<span className='text-emerald-500 text-3xl font-bold'>Hub</span></p>
+            <p className='text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 to-pink-500'>Searc<span className='text-emerald-500'>Hub</span></p>
           </div>
         </div>
       )}

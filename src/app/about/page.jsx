@@ -4,7 +4,7 @@ export default function AboutPage () {
       <p className='text-lg text-center font-semibold dark:text-neutral-200 text-neutral-800'>
         Acerca del sitio (*_*)
       </p>
-      <p className='mt-2 text-sm font-medium 2xl:text-base dark:text-neutral-200 text-neutral-800'>
+      <p className='mt-2 leading-relaxed text-sm font-medium 2xl:text-base dark:text-neutral-200 text-neutral-800'>
         La aplicación fue desarrollada con el Framework de {''}
         <a className='paragraph-content'
           data-type='nextjs'

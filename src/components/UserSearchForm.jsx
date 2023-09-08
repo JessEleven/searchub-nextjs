@@ -20,7 +20,7 @@ const UserSearchForm = ({ getUser }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='mt-10'>
+    <form onSubmit={handleSubmit(onSubmit)} className='mt-8'>
 
       <div className='flex items-center text-neutral-200 font-medium text-sm 2xl:text-base'>
         <div className='relative flex w-full bg-slate-900 bg-opacity-90 rounded-lg'>
@@ -29,7 +29,7 @@ const UserSearchForm = ({ getUser }) => {
           </div>
           <input
               {... register('username', { required: true })}
-              className='out-input bg-transparent py-3 flex items-center w-full pr-5 pl-11 rounded-l-lg placeholder:text-neutral-200'
+              className='out-input bg-transparent py-3 flex items-center w-full pr-5 pl-11 rounded-l-lg placeholder:text-neutral-200 caret-emerald-500'
               name='username'
               type='search'
               placeholder='Usuario GitHub 🚀'

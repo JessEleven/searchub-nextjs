@@ -3,7 +3,7 @@
 }
 
 .repo-svg {
-  @apply flex justify-center text-indigo-700
+  @apply flex justify-center dark:text-cyan-400 text-indigo-700
 }
 
 .repo-title {

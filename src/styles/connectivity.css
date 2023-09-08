@@ -15,5 +15,5 @@
 }
 
 .media-svg {
-  @apply w-5 h-5 2xl:w-6 2xl:h-6 text-indigo-700
+  @apply w-5 h-5 2xl:w-6 2xl:h-6 dark:text-cyan-400 text-indigo-700
 }
