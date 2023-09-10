@@ -1,5 +1,5 @@
 .media-card {
-  @apply flex items-center p-2 rounded-lg dark:bg-[#242424] bg-[#E1E1E3]
+  @apply flex items-center p-3 md:p-2.5 rounded-lg dark:bg-[#242424] bg-[#E1E1E3]
 }
 
 .media-hover {

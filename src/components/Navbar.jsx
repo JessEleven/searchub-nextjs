@@ -7,7 +7,7 @@ import MenuButton from './MenuButton'
 export default function Navbar () {
   return (
     <div className ='mt-0 mx-5 md:mx-0 rounded-lg dark:bg-opacity-20 dark:bg-slate-500 bg-[#E1E1E3]'>
-      <div className='h-12 mt-4 md:h-14 px-5 flex items-center justify-between'>
+      <div className='mt-5 h-14 md:h-16 px-5 flex items-center justify-between'>
 
         <Link translate='no' href={'/'} className='flex items-center gap-1.5 text-2xl font-bold md:text-3xl'>
           <Image
